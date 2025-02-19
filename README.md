@@ -8,8 +8,8 @@ The opensource AI search platform
 </div>
 
 ## About me
-[X](https://sum4all.site/twitter)\
-[telegram](https://sum4all.site/telegram)
+[X](https://x.com/fatwang2ai)\
+[discord](https://discord.gg/AKXYq32Bxc)
 
 <a href="https://www.buymeacoffee.com/fatwang2" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
@@ -23,7 +23,7 @@ The opensource AI search platform
 Choose your search service
 
 ### Search1API
-Search1API is a versatile search aggregation service that enables you to perform searches across Google, Bing, and DuckDuckGo, and also retrieve clear content from URLs. [search1api website]( https://go.search1api.com/homepage)
+Search1API is a versatile search aggregation service that enables you to perform searches across Google, Bing, and DuckDuckGo, and also retrieve clear content from URLs. [search1api website]( https://www.search1api.com/?utm_source=search4all)
 
 ### Bing Search
 To use the Bing Web Search API, please visit [this link](https://www.microsoft.com/en-us/bing/apis/bing-web-search-api) to obtain your Bing subscription key.
