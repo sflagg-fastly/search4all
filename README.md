@@ -29,7 +29,7 @@ Search1API is a versatile search aggregation service that enables you to perform
 To use the Bing Web Search API, please visit [this link](https://www.microsoft.com/en-us/bing/apis/bing-web-search-api) to obtain your Bing subscription key.
 
 ### Google Search
-You have three options for Google Search: you can use the [SearchApi Google Search API](https://www.searchapi.io/) from SearchApi, [Serper Google Search API](https://www.serper.dev) from Serper, or opt for the [Programmable Search Engine](https://developers.google.com/custom-search) provided by Google.
+You have three options for Google Search: you can use the [SerpApi Google Search API](https://serpapi.com/) from SerpApi, or opt for the [Programmable Search Engine](https://developers.google.com/custom-search) provided by Google.
 
 ### SearXNG Search
 you can host your personal [SearXNG server](https://github.com/searxng/searxng), then you do not need pay for the search api. You just need provide the server address in `SEARXNG_BASE_URL`, plz be sure you enable the json format for the SearXNG server.
@@ -101,8 +101,7 @@ This project provides some additional configuration items set with environment v
 | `BING_SEARCH_V7_SUBSCRIPTION_KEY`      | No       | If you choose BING. | `xxx`   
 | `GOOGLE_SEARCH_CX`      | No       | If you choose GOOGLE. | `xxxx`   
 | `GOOGLE_SEARCH_API_KEY`      | No       | If you choose GOOGLE. | `xxx`   
-| `SEARCHAPI_API_KEY`      | No       | If you choose SEARCHAPI. | `xxx`   
-| `SERPER_SEARCH_API_KEY`      | No       | If you choose SERPER. | `xxx`
+| `SERPAPI_API_KEY`      | No       | If you choose SERPERAPI. | `xxx`
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS`      | No       | You can use Google Analytics to know how many users you have on your website. | MEASUREMENT ID,you can find on your google analytics account,like `G-XXXXXX`
 | `SEARXNG_BASE_URL` | No       | the hosted serxng server address. it is required when the BACKEND is `SEARXNG` | `https://serxng.xxx.com/`
 
