@@ -14,7 +14,7 @@ The opensource AI search platform
 <a href="https://www.buymeacoffee.com/fatwang2" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Sponsors
-<a href="https://serpapi.com/?utm_source=search4all" target="_blank"><img src="https://private-user-images.githubusercontent.com/7175262/465221419-3feb834c-2721-404c-a64d-02104ed4aba7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ0OTA0MzYsIm5iZiI6MTc1NDQ5MDEzNiwicGF0aCI6Ii83MTc1MjYyLzQ2NTIyMTQxOS0zZmViODM0Yy0yNzIxLTQwNGMtYTY0ZC0wMjEwNGVkNGFiYTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDgwNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA4MDZUMTQyMjE2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzRjYTQzMmE3YjYyMGNkNzliOTBhZjgwNTI0Y2U2N2VmNDEwM2JkM2RjZmZhNThjM2I5NmI0NGRkMzJjYmNkYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.nNdkv2tsFGrZEBZ-CAXspeBHkVkv3Ro9yqybQDwm_Fs" alt="SerpApi" width="217px" ></a>
+<a href="https://serpapi.com/?utm_source=search4all" target="_blank"><img src="https://github.com/user-attachments/assets/50a21c6e-4675-430f-8f00-d6017d1c5dd8" alt="SerpApi" width="217px" ></a>
 
 SerpApi - Search API - Enhance your LLM's knowledge with data from search engines like Google and Bing using our simple API.
 
