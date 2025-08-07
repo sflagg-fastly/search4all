@@ -16,7 +16,7 @@ The opensource AI search platform
 ## Sponsors
 <a href="https://serpapi.com/?utm_source=search4all" target="_blank"><img src="https://github.com/user-attachments/assets/50a21c6e-4675-430f-8f00-d6017d1c5dd8" alt="SerpApi" width="217px" ></a>
 
-SerpApi - Search API - Enhance your LLM's knowledge with data from search engines like Google and Bing using our simple API.
+[SerpApi - Search API](https://serpapi.com/?utm_source=search4all) - Enhance your LLM's knowledge with data from search engines like Google and Bing using our simple API.
 
 
 ## Features
