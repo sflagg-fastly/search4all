@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
+    "export": "next export -o ../ui && ( [ -d ../ui/ui ] && mv ../ui/ui/* ../ui/ && rmdir ../ui/ui || true )",
     "build-export": "npm run build && npm run export",
     "start": "next start",
     "lint": "next lint"
