@@ -10,11 +10,11 @@ export const Logo: FC = () => {
           width="40"
           height="40"
           viewBox="0 0 24 24"
-          stroke-width="2.5"
+          strokeWidth="2.5"
           stroke="#00abfb"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />

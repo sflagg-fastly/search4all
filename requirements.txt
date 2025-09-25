@@ -4,10 +4,10 @@ openai==1.14.1
 anthropic
 loguru
 san
-ic
+icecream
 sqlitedict
 python-dotenv
 tld==0.13
 tldextract==5.1.2
 trafilatura==1.8.1
-serpapi
+google-search-results>=2.4.2
