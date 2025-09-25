@@ -41,7 +41,7 @@ async def ui_noslash(_):
 
 @app.get("/ui/<path:path>")
 async def ui_static(_, path):
-    full = os.path.join(UI_DIR, path)
+    full = os.path.join(BASE_DIR, path)
     if os.path.isdir(full):
         index_html = os.path.join(full, "index.html")
         if os.path.exists(index_html):
@@ -49,7 +49,7 @@ async def ui_static(_, path):
     if os.path.exists(full):
         return await file(full)
     # SPA fallback
-    return await file(os.path.join(UI_DIR, "index.html"))
+    return await file(os.path.join(BASE_DIR, "index.html"))
 
 ################################################################################
 # Constant values for the RAG model.
