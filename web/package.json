@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export -o ../ui && ( [ -d ../ui/ui ] && mv ../ui/ui/* ../ui/ && rmdir ../ui/ui || true )",
-    "build-export": "npm run build && npm run export",
+    "clean-ui": "rm -rf ../ui && mkdir -p ../ui",
+    "export": "next export -o ../ui_tmp && ( [ -d ../ui_tmp/ui ] && rsync -a --delete ../ui_tmp/ui/ ../ui/ || rsync -a --delete ../ui_tmp/ ../ui/ ) && rm -rf ../ui_tmp",
+    "build-export": "npm run build && npm run clean-ui && npm run export",
     "start": "next start",
     "lint": "next lint"
   },
