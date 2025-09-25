@@ -3,7 +3,7 @@ httpx
 openai==1.14.1
 anthropic
 loguru
-san
+sanic
 icecream
 sqlitedict
 python-dotenv
