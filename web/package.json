@@ -2,7 +2,9 @@
   "name": "search",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": ">=20 <21" },
+  "engines": {
+    "node": ">=20 <21"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -33,7 +35,7 @@
     "unist-builder": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.19.17",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "eslint": "^8",
