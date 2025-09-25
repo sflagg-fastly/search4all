@@ -860,10 +860,6 @@ async def query_function(request: sanic.Request):
     )
 
 
-app.static("/ui", os.path.join(BASE_DIR, "ui/"), name="/")
-app.static("/", os.path.join(BASE_DIR, "ui/index.html"), name="ui")
-
-
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", "8000"))  # Render provides PORT
