@@ -4,7 +4,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: "Search4All",
