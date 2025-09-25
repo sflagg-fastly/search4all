@@ -28,7 +28,7 @@ from sqlitedict import SqliteDict
 from sanic.response import redirect, file, text
 
 app = Sanic("search4all")  # create the app before decorators
-UI_DIR = os.path.join(os.path.dirname(__file__), "ui")
+BASE_DIR = os.path.join(os.path.dirname(__file__), "ui")
 
 
 @app.get("/")
