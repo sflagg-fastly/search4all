@@ -25,15 +25,31 @@ from sanic import Sanic
 import sanic.exceptions
 from sanic.exceptions import HTTPException, InvalidUsage
 from sqlitedict import SqliteDict
-from sanic.response import redirect
+from sanic.response import redirect, file, text
+
+app = Sanic("search4all")  # create the app before decorators
+UI_DIR = os.path.join(os.path.dirname(__file__), "ui")
+
 
 @app.get("/")
 async def root(_):
     return redirect("/ui/")
 
-app = Sanic("search")
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+@app.get("/ui")
+async def ui_noslash(_):
+    return redirect("/ui/")
 
+@app.get("/ui/<path:path>")
+async def ui_static(_, path):
+    full = os.path.join(UI_DIR, path)
+    if os.path.isdir(full):
+        index_html = os.path.join(full, "index.html")
+        if os.path.exists(index_html):
+            return await file(index_html)
+    if os.path.exists(full):
+        return await file(full)
+    # SPA fallback
+    return await file(os.path.join(UI_DIR, "index.html"))
 
 ################################################################################
 # Constant values for the RAG model.
