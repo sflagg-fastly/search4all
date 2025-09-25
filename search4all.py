@@ -25,22 +25,11 @@ from sanic import Sanic
 import sanic.exceptions
 from sanic.exceptions import HTTPException, InvalidUsage
 from sqlitedict import SqliteDict
-from sanic.response import redirect, file, text
 
-app = Sanic("search4all")  # create the app before decorators
-BASE_DIR = os.path.join(os.path.dirname(__file__), "ui")
+app = Sanic("search")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-@app.get("/")
-async def root(_):
-    return redirect("/ui/")
-
-@app.get("/ui")
-async def ui_noslash(_):
-    return redirect("/ui/")
-
-# Single static registration (no duplicate):
-app.static("/ui", BASE_DIR, name="ui")
 
 ################################################################################
 # Constant values for the RAG model.
@@ -860,8 +849,11 @@ async def query_function(request: sanic.Request):
     )
 
 
+app.static("/ui", os.path.join(BASE_DIR, "ui/"), name="/")
+app.static("/", os.path.join(BASE_DIR, "ui/index.html"), name="ui")
+
+
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", "8000"))  # Render provides PORT
-    # important: bind to 0.0.0.0
-    app.run(host="0.0.0.0", port=port, access_log=True, single_process=True)
+    port = int(os.getenv("PORT") or 8800)
+    workers = int(os.getenv("WORKERS") or 1)
+    app.run(host="0.0.0.0", port=port, workers=workers, debug=False)
