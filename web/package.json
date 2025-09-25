@@ -8,8 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "build-export": "npm run build && npm run export",
+    "build-export": "next build",
     "start": "next start",
     "lint": "next lint"
   },
