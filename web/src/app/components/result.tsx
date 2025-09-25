@@ -15,30 +15,30 @@ export const Result: FC<{ query: string; rid: string }> = ({ query, rid }) => {
   const [relates, setRelates] = useState<Relate[] | null>(null);
   const [error, setError] = useState<number | null>(null);
   useEffect(() => {
-  if (!query) return;
+    if (!query) return;
 
-  const controller = new AbortController();
+    const controller = new AbortController();
 
-  // catch in case parseStreaming rejects on abort
-  parseStreaming(
-    controller,
-    query,
-    rid,
-    getLang(),
-    setSources,
-    setMarkdown,
-    setRelates,
-    setError,
-  ).catch((err: any) => {
-    if (err?.name === "AbortError") return; // ignore user-initiated cancel
-    setError(500);
-    // optional: console.error(err);
-  });
+    // catch in case parseStreaming rejects on abort
+    parseStreaming(
+      controller,
+      query,
+      rid,
+      getLang(),
+      setSources,
+      setMarkdown,
+      setRelates,
+      setError,
+    ).catch((err: any) => {
+      if (err?.name === "AbortError") return; // ignore user-initiated cancel
+      setError(500);
+      // optional: console.error(err);
+    });
 
-  return () => {
-    if (!controller.signal.aborted) controller.abort();
-  };
-}, [query, rid]);
+    return () => {
+      if (!controller.signal.aborted) controller.abort();
+    };
+  }, [query, rid]);
   return (
     <div className="flex flex-col gap-8">
       <Answer markdown={markdown} sources={sources}></Answer>
