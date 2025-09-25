@@ -39,17 +39,8 @@ async def root(_):
 async def ui_noslash(_):
     return redirect("/ui/")
 
-@app.get("/ui/<path:path>")
-async def ui_static(_, path):
-    full = os.path.join(BASE_DIR, path)
-    if os.path.isdir(full):
-        index_html = os.path.join(full, "index.html")
-        if os.path.exists(index_html):
-            return await file(index_html)
-    if os.path.exists(full):
-        return await file(full)
-    # SPA fallback
-    return await file(os.path.join(BASE_DIR, "index.html"))
+# Single static registration (no duplicate):
+app.static("/ui", BASE_DIR, name="ui")
 
 ################################################################################
 # Constant values for the RAG model.
@@ -875,6 +866,6 @@ app.static("/", os.path.join(BASE_DIR, "ui/index.html"), name="ui")
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", "8070"))  # Render provides PORT
+    port = int(os.environ.get("PORT", "8000"))  # Render provides PORT
     # important: bind to 0.0.0.0
     app.run(host="0.0.0.0", port=port, access_log=True, single_process=True)
