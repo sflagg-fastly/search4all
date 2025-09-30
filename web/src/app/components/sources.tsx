@@ -55,9 +55,9 @@ export const Sources: FC<{ sources: Source[] }> = ({ sources }) => {
   return (
     <Wrapper
       title={
-        <>
-          <BookText /> {Locale.Sources.sources}
-        </>
+        <div className="flex items-center gap-2">
+          <BookText /> <span>{Locale.Sources.sources}</span>
+        </div>
       }
       content={
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
