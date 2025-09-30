@@ -19,7 +19,6 @@ async function pump(
       }
       if (value) {
         onChunk && onChunk(value);
-        // stream decode to avoid re-chunking issues
         const text = decoder.decode(value, { stream: true });
         if (text) controller.enqueue(text);
       }
@@ -27,7 +26,11 @@ async function pump(
   } catch (err) {
     controller.error(err);
   } finally {
-    try { reader.releaseLock(); } catch {}
+    try {
+      reader.releaseLock();
+    } catch {
+      // ignore
+    }
   }
 }
 
@@ -42,8 +45,16 @@ export const fetchStream = (
       void pump(reader, controller, onChunk, onDone);
     },
     cancel() {
-      try { reader.cancel(); } catch {}
-      try { decoder.decode(); } catch {} // finalize decoder
+      try {
+        reader.cancel();
+      } catch {
+        // ignore
+      }
+      try {
+        decoder.decode();
+      } catch {
+        // ignore
+      }
     },
   });
 };
