@@ -6,7 +6,13 @@ import { BookText } from "lucide-react";
 import { FC } from "react";
 import Locale from "../locales";
 
-const SourceItem: FC<{ source: Source; index: number }> = ({ source, index }) => {
+const SourceItem: FC<{
+  source: Source;
+  index: number;
+}> = ({
+  source,
+  index,
+}) => {
   const { id, name, url } = source;
   const domain = new URL(url).hostname;
 
@@ -15,7 +21,12 @@ const SourceItem: FC<{ source: Source; index: number }> = ({ source, index }) =>
       className="relative text-xs py-3 px-3 bg-zinc-100 hover:bg-zinc-200 rounded-lg flex flex-col gap-2"
       key={id}
     >
-      <a href={url} target="_blank" rel="noreferrer" className="absolute inset-0" />
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className="absolute inset-0"
+      />
       <div className="font-medium text-zinc-950 text-ellipsis overflow-hidden whitespace-nowrap break-words">
         {name}
       </div>
