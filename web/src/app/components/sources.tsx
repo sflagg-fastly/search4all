@@ -20,7 +20,7 @@ const SourceItem: FC<SourceItemProps> = ({ source, index }) => {
       className="relative text-xs py-3 px-3 bg-zinc-100 hover:bg-zinc-200 rounded-lg flex flex-col gap-2"
       key={id}
     >
-      
+      <a
         href={url}
         target="_blank"
         rel="noreferrer"
@@ -55,9 +55,9 @@ export const Sources: FC<{ sources: Source[] }> = ({ sources }) => {
   return (
     <Wrapper
       title={
-        <div className="flex items-center gap-2">
-          <BookText /> <span>{Locale.Sources.sources}</span>
-        </div>
+        <>
+          <BookText /> {Locale.Sources.sources}
+        </>
       }
       content={
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
