@@ -6,7 +6,15 @@ import { BookText } from "lucide-react";
 import { FC } from "react";
 import Locale from "../locales";
 
-const SourceItem: FC<{ source: Source; index: number }> = ({ source, index }) => {
+type SourceItemProps = {
+  source: Source;
+  index: number;
+};
+
+const SourceItem: FC<SourceItemProps> = ({
+  source,
+  index,
+}) => {
   const { id, name, url } = source;
   const domain = new URL(url).hostname;
 
