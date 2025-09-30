@@ -11,10 +11,7 @@ type SourceItemProps = {
   index: number;
 };
 
-const SourceItem: FC<SourceItemProps> = ({
-  source,
-  index,
-}) => {
+const SourceItem: FC<SourceItemProps> = ({ source, index }) => {
   const { id, name, url } = source;
   const domain = new URL(url).hostname;
 
@@ -23,7 +20,7 @@ const SourceItem: FC<SourceItemProps> = ({
       className="relative text-xs py-3 px-3 bg-zinc-100 hover:bg-zinc-200 rounded-lg flex flex-col gap-2"
       key={id}
     >
-      <a
+      
         href={url}
         target="_blank"
         rel="noreferrer"
